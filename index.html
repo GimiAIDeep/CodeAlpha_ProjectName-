@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="gallery-title" >Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('architecture')">Architecture</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <!-- Nature -->
+    <div class="gallery-item nature">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature 1" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item nature">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Nature 2" onclick="openLightbox(this.src)">
+    </div>
+
+    <!-- Architecture -->
+    <div class="gallery-item architecture">
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad" alt="Architecture 1" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item architecture">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUTI3M2UkdbI_JaHam5yLDC-biuQ3wvo_JZg&s">
+    </div>
+
+    <!-- Animals -->
+    <div class="gallery-item animals">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1pXzqW_85iqVok_8TP0sY3YGDPI0N44Myfg&s">
+    </div>
+    <div class="gallery-item animals">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a "  alt="Animal 2" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="">
+    <span id="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
